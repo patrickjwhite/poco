@@ -19,6 +19,15 @@
 config.build
 config.make
 
+# CMake #
+########
+cmake_install.cmake
+cmake_uninstall.cmake
+CMakeFiles
+CMakeCache.txt
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -34,10 +43,11 @@ config.make
 
 # Logs and databases #
 ######################
-*.log
+*.log*
 *.sqlite
 *.db
 test*.txt
+XML/testsuite/rss.xml
 
 # OS generated files #
 ######################
@@ -49,6 +59,7 @@ test*.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+*~
 
 # VS generated files #
 ######################
@@ -81,5 +92,7 @@ release_static/
 debug_static/
 bin/
 bin64/
+lib/
+lib64/
 pocomsg.h
 

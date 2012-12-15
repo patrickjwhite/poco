@@ -46,16 +46,21 @@ public:
 	JSONTest(const std::string& name);
 	~JSONTest();
 
+	void testStringifier();
 	void testNullProperty();
 	void testTrueProperty();
 	void testFalseProperty();
 	void testNumberProperty();
+#if defined(POCO_HAVE_INT64)
+	void testNumber64Property();
+#endif
 	void testStringProperty();
 	void testEmptyObject();
 	void testDoubleProperty();
 	void testDouble2Property();
 	void testDouble3Property();
 	void testObjectProperty();
+	void testObjectArray();
 	void testEmptyArray();
 	void testNestedArray();
 	void testNullElement();
