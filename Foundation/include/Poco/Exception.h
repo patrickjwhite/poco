@@ -103,6 +103,13 @@ private:
 	std::string _msg;
 	Exception*  _pNested;
 	int			_code;
+
+	void saveBacktrace();
+	std::string _bt;
+public:
+	std::string backtraceText() const;
+	/// Returns a backtrace from time the exception was
+	/// created. Available on platforms supported by Poco::Backtrace.
 };
 
 
